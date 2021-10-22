@@ -2,8 +2,6 @@
 
 <html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tamires Santos - DoWhile 2021</title>
 
     <link rel="stylesheet" href="style.css" />
@@ -23,14 +21,22 @@
           <span>
             <img src="images/build.svg" alt="Selo Rocketseat" />
           </span>
-          <img src="https://github.com/tfstam.png" alt="Foto pessoal" />
+          <img
+            src="https://lorempixel.com/185/185/people/"
+            alt="Foto pessoal"
+            id="UserImage"
+          />
         </div>
 
         <h1 id="userName">Tamires Santos</h1>
-        <a href="https://github.com/tfstam" target="_blank">
+        <a id="userLink" href="https://github.com/tfstam" target="_blank">
           <img src="images/github.svg" alt="ícone github" />
-          tfstam</a
+          <span id="userLogin">tfstam</span></a
         >
+
+        <p id="userBio">
+          An instructor focused on helping pople start programming for web
+        </p>
 
         <ul id="socialLinks">
           <li class="youtube">
@@ -57,26 +63,6 @@
       </div>
     </main>
 
-    <script>
-      const LinksSocialMedia = {
-        github: 'tfstam',
-        youtube: '',
-        facebook: '',
-        instagram: 'tamsantos',
-        twitter: 'tamsantos_'
-      }
-
-      function changeSocialMediaLinks() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
-
-          alert(li.children[0].href)
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
